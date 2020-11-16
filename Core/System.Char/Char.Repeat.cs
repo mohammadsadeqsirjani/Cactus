@@ -1,16 +1,13 @@
-﻿namespace Core.System.Char
+﻿public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>
+    ///     A char extension method that repeats a character the specified number of times.
+    /// </summary>
+    /// <param name="this">The @this to act on.</param>
+    /// <param name="repeatCount">Number of repeats.</param>
+    /// <returns>The repeated char.</returns>
+    public static string Repeat(this char @this, int repeatCount)
     {
-        /// <summary>
-        ///     A char extension method that repeats a character the specified number of times.
-        /// </summary>
-        /// <param name="this">The @this to act on.</param>
-        /// <param name="repeatCount">Number of repeats.</param>
-        /// <returns>The repeated char.</returns>
-        public static string Repeat(this char @this, int repeatCount)
-        {
-            return new string(@this, repeatCount);
-        }
+        return new string(@this, repeatCount);
     }
 }
