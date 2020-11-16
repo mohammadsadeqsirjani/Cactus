@@ -8,6 +8,6 @@
     /// <returns>Parameter  or , whichever is larger.</returns>
     public static byte Max(this byte @this, byte value)
     {
-        return global::System.Math.Max(@this, value);
+        return System.Math.Max(@this, value);
     }
 }

@@ -9,6 +9,6 @@
     /// ###
     public static bool In(this char @this, params char[] values)
     {
-        return global::System.Array.IndexOf(values, @this) != -1;
+        return System.Array.IndexOf(values, @this) != -1;
     }
 }

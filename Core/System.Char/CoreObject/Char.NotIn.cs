@@ -10,6 +10,6 @@ public static partial class Extension
     /// ###
     public static bool NotIn(this char @this, params char[] values)
     {
-        return global::System.Array.IndexOf(values, @this) == -1;
+        return System.Array.IndexOf(values, @this) == -1;
     }
 }
