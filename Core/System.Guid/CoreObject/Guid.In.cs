@@ -7,8 +7,8 @@
     /// <param name="values">The value list to compare with the object.</param>
     /// <returns>true if the values list contains the object, else false.</returns>
     /// ###
-    public static bool In(this global::System.Guid @this, params global::System.Guid[] values)
+    public static bool In(this System.Guid @this, params System.Guid[] values)
     {
-        return global::System.Array.IndexOf(values, @this) != -1;
+        return System.Array.IndexOf(values, @this) != -1;
     }
 }
