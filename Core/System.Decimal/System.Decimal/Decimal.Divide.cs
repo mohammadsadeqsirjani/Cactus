@@ -1,17 +1,13 @@
-﻿// ReSharper disable once CheckNamespace
-namespace Core.System.Decimal
+﻿public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>
+    ///     Divides two specified  values.
+    /// </summary>
+    /// <param name="this">The dividend.</param>
+    /// <param name="value">The divisor.</param>
+    /// <returns>The result of dividing  by .</returns>
+    public static decimal Divide(this decimal @this, decimal value)
     {
-        /// <summary>
-        ///     Divides two specified  values.
-        /// </summary>
-        /// <param name="this">The dividend.</param>
-        /// <param name="value">The divisor.</param>
-        /// <returns>The result of dividing  by .</returns>
-        public static decimal Divide(this decimal @this, decimal value)
-        {
-            return decimal.Divide(@this, value);
-        }
+        return decimal.Divide(@this, value);
     }
 }
