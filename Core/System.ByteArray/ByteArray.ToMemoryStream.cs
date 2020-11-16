@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+public static partial class Extension
+{
+    /// <summary>
+    ///     A byte[] extension method that converts the @this to a memory stream.
+    /// </summary>
+    /// <param name="this">The @this to act on.</param>
+    /// <returns>@this as a MemoryStream.</returns>
+    public static MemoryStream ToMemoryStream(this byte[] @this)
+    {
+        return new MemoryStream(@this);
+    }
+}
