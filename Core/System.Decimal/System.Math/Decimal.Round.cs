@@ -16,7 +16,7 @@ namespace Core.System.Decimal
         /// </returns>
         public static decimal Round(this decimal @this)
         {
-            return global::System.Math.Round(@this);
+            return Math.Round(@this);
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Core.System.Decimal
         /// <returns>The number nearest to  that contains a number of fractional digits equal to .</returns>
         public static decimal Round(this decimal @this, int decimals)
         {
-            return global::System.Math.Round(@this, decimals);
+            return Math.Round(@this, decimals);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace Core.System.Decimal
         /// </returns>
         public static decimal Round(this decimal @this, MidpointRounding mode)
         {
-            return global::System.Math.Round(@this, mode);
+            return Math.Round(@this, mode);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Core.System.Decimal
         /// </returns>
         public static decimal Round(this decimal @this, int decimals, MidpointRounding mode)
         {
-            return global::System.Math.Round(@this, decimals, mode);
+            return Math.Round(@this, decimals, mode);
         }
     }
 }

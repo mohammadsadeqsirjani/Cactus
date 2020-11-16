@@ -16,7 +16,7 @@ namespace Core.System.DateTime
         [Obsolete]
         public static bool IsDaylightSavingTime(this global::System.DateTime @this, DaylightTime daylightTimes)
         {
-            return global::System.TimeZone.IsDaylightSavingTime(@this, daylightTimes);
+            return TimeZone.IsDaylightSavingTime(@this, daylightTimes);
         }
     }
 }
