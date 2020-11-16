@@ -1,5 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-public static partial class Extension
+﻿public static partial class Extension
 {
     /// <summary>
     ///     Copies a range of elements from an  starting at the specified source index and pastes them to another
