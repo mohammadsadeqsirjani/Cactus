@@ -1,13 +1,10 @@
-﻿namespace Core.System.Guid
+﻿public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>A GUID extension method that queries if a not is empty.</summary>
+    /// <param name="this">The @this to act on.</param>
+    /// <returns>true if a not is empty, false if not.</returns>
+    public static bool IsNotEmpty(this global::System.Guid @this)
     {
-        /// <summary>A GUID extension method that queries if a not is empty.</summary>
-        /// <param name="this">The @this to act on.</param>
-        /// <returns>true if a not is empty, false if not.</returns>
-        public static bool IsNotEmpty(this global::System.Guid @this)
-        {
-            return @this != global::System.Guid.Empty;
-        }
+        return @this != global::System.Guid.Empty;
     }
 }
