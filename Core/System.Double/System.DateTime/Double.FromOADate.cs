@@ -5,8 +5,8 @@
     /// </summary>
     /// <param name="this">An OLE Automation Date value.</param>
     /// <returns>An object that represents the same date and time as .</returns>
-    public static global::System.DateTime FromOaDate(this double @this)
+    public static System.DateTime FromOaDate(this double @this)
     {
-        return global::System.DateTime.FromOADate(@this);
+        return System.DateTime.FromOADate(@this);
     }
 }
