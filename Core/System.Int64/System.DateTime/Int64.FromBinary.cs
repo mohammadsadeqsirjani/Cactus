@@ -8,8 +8,8 @@
     ///     a 62-bit field.
     /// </param>
     /// <returns>An object that is equivalent to the  object that was serialized by the  method.</returns>
-    public static global::System.DateTime FromBinary(this long @this)
+    public static System.DateTime FromBinary(this long @this)
     {
-        return global::System.DateTime.FromBinary(@this);
+        return System.DateTime.FromBinary(@this);
     }
 }

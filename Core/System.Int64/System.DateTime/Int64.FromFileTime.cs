@@ -7,8 +7,8 @@
     /// <returns>
     ///     An object that represents the local time equivalent of the date and time represented by the  parameter.
     /// </returns>
-    public static global::System.DateTime FromFileTime(this long fileTime)
+    public static System.DateTime FromFileTime(this long fileTime)
     {
-        return global::System.DateTime.FromFileTime(fileTime);
+        return System.DateTime.FromFileTime(fileTime);
     }
 }
