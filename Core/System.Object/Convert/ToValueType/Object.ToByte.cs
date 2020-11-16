@@ -1,0 +1,18 @@
+﻿using System;
+
+// ReSharper disable once CheckNamespace
+namespace Core.System.Object
+{
+    public static partial class Extension
+    {
+        /// <summary>
+        ///     An object extension method that converts the @this to a byte.
+        /// </summary>
+        /// <param name="this">The @this to act on.</param>
+        /// <returns>@this as a byte.</returns>
+        public static byte ToByte(this object @this)
+        {
+            return Convert.ToByte(@this);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+﻿using System;
+
+// ReSharper disable once CheckNamespace
+namespace Core.System.Double
+{
+    public static partial class Extension
+    {
+        /// <summary>
+        ///     Returns the angle whose sine is the specified number.
+        /// </summary>
+        /// <param name="this">
+        ///     A number representing a sine, where  must be greater than or equal to -1, but less than or equal
+        ///     to 1.
+        /// </param>
+        /// <returns>
+        ///     An angle, ?, measured in radians, such that -?/2 ????/2 -or-  if  &lt; -1 or  &gt; 1 or  equals .
+        /// </returns>
+        public static double Asin(this double @this)
+        {
+            return Math.Asin(@this);
+        }
+    }
+}

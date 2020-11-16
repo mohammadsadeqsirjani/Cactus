@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>1.2.3</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryUrl>https://dev.azure.com/msadeqsirjani/_git/Cactus</RepositoryUrl>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageProjectUrl>https://dev.azure.com/msadeqsirjani/_git/Cactus</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Product>Cactus</Product>
+    <PackageId>Cactus.Blade.Caching</PackageId>
+    <AssemblyName>Cactus.Blade.Caching</AssemblyName>
+    <RootNamespace>Cactus.Blade.Caching</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System.Object\Object.FromCache.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="System.Object\Object.FromCache.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>

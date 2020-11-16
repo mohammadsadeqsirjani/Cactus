@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <PackageProjectUrl>https://dev.azure.com/msadeqsirjani/_git/Cactus</PackageProjectUrl>
+    <RepositoryUrl>https://dev.azure.com/msadeqsirjani/_git/Cactus</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Company>Mohammad Sadeq Sirjani</Company>
+    <Product>Cactus</Product>
+    <PackageId>Cactus.Core</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System.Array\Array.ClearAll.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="System.Array\Array.ClearAll.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="System.EventHandler\" />
+    <Folder Include="System.ByteArray\" />
+  </ItemGroup>
+
+</Project>
