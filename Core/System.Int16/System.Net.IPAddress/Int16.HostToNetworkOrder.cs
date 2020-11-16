@@ -1,18 +1,14 @@
 ﻿using System.Net;
 
-// ReSharper disable once CheckNamespace
-namespace Core.System.Int16
+public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>
+    ///     Converts a short value from @this byte order to network byte order.
+    /// </summary>
+    /// <param name="this">The number to convert, expressed in @this byte order.</param>
+    /// <returns>A short value, expressed in network byte order.</returns>
+    public static short HostToNetworkOrder(this short @this)
     {
-        /// <summary>
-        ///     Converts a short value from @this byte order to network byte order.
-        /// </summary>
-        /// <param name="this">The number to convert, expressed in @this byte order.</param>
-        /// <returns>A short value, expressed in network byte order.</returns>
-        public static short HostToNetworkOrder(this short @this)
-        {
-            return IPAddress.HostToNetworkOrder(@this);
-        }
+        return IPAddress.HostToNetworkOrder(@this);
     }
 }

@@ -1,18 +1,14 @@
 ﻿using System;
 
-// ReSharper disable once CheckNamespace
-namespace Core.System.Int16
+public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>
+    ///     An Int16 extension method that minutes the given this.
+    /// </summary>
+    /// <param name="this">The @this to act on.</param>
+    /// <returns>A TimeSpan.</returns>
+    public static TimeSpan Minutes(this short @this)
     {
-        /// <summary>
-        ///     An Int16 extension method that minutes the given this.
-        /// </summary>
-        /// <param name="this">The @this to act on.</param>
-        /// <returns>A TimeSpan.</returns>
-        public static TimeSpan Minutes(this short @this)
-        {
-            return TimeSpan.FromMinutes(@this);
-        }
+        return TimeSpan.FromMinutes(@this);
     }
 }
