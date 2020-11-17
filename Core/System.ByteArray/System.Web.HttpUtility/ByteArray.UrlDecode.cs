@@ -8,11 +8,11 @@ public static partial class Extension
     ///     Converts a URL-encoded byte array into a decoded string using the specified decoding object.
     /// </summary>
     /// <param name="bytes">The array of bytes to decode.</param>
-    /// <param name="e">The  that specifies the decoding scheme.</param>
+    /// <param name="encoding">The  that specifies the decoding scheme.</param>
     /// <returns>A decoded string.</returns>
-    public static string UrlDecode(this byte[] bytes, Encoding e)
+    public static string UrlDecode(this byte[] bytes, Encoding encoding)
     {
-        return HttpUtility.UrlDecode(bytes, e);
+        return HttpUtility.UrlDecode(bytes, encoding);
     }
 
     /// <summary>
