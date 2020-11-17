@@ -1,0 +1,18 @@
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public static partial class Extension
+{
+    /// <summary>
+    ///     A string extension method that extracts all Decimal from the string.
+    /// </summary>
+    /// <param name="this">The @this to act on.</param>
+    /// <returns>All extracted Decimal.</returns>
+    public static decimal[] ExtractManyDecimal(this string @this)
+    {
+        return Regex.Matches(@this, @"[-]?\d+(\.\d+)?")
+            .Select(x => Convert.ToDecimal(x.Value))
+            .ToArray();
+    }
+}
