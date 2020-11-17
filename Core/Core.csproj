@@ -20,6 +20,7 @@
   <ItemGroup>
     <Compile Remove="System.ByteArray\ByteArray.ToMemoryStream.cs" />
     <Compile Remove="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
+    <Compile Remove="System.String\String.NullIfEmpty.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +36,7 @@
     <None Include="System.ByteArray\ByteArray.ToMemoryStream.cs" />
     <None Include="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
     <None Include="System.Int32\CodeObject\Int32.Between.cs" />
+    <None Include="System.String\String.NullIfEmpty.cs" />
   </ItemGroup>
 
   <ItemGroup>
