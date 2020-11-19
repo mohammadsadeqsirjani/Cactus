@@ -1,23 +1,20 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 
-namespace Core.System.Enum
+public static partial class Extension
 {
-    public static partial class Extension
+    /// <summary>
+    ///     An object extension method that gets description attribute.
+    /// </summary>
+    /// <param name="value">The value to act on.</param>
+    /// <returns>The description attribute.</returns>
+    public static string GetCustomAttributeDescription(this System.Enum value)
     {
-        /// <summary>
-        ///     An object extension method that gets description attribute.
-        /// </summary>
-        /// <param name="value">The value to act on.</param>
-        /// <returns>The description attribute.</returns>
-        public static string GetCustomAttributeDescription(this global::System.Enum value)
-        {
-            var attribute = value
-                .GetType()
-                .GetField(value.ToString())
-                .GetCustomAttributes(typeof(DescriptionAttribute), false)
-                .FirstOrDefault() as DescriptionAttribute;
-            return attribute?.Description;
-        }
+        var attribute = value
+            .GetType()
+            .GetField(value.ToString())
+            .GetCustomAttributes(typeof(DescriptionAttribute), false)
+            .FirstOrDefault() as DescriptionAttribute;
+        return attribute?.Description;
     }
 }

@@ -1,5 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-public static partial class Extension
+﻿public static partial class Extension
 {
     /// <summary>
     ///     Searches for the specified object and returns the index of the last occurrence within the entire one-

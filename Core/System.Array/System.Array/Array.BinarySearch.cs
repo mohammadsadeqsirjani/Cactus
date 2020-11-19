@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 
-
-// ReSharper disable once CheckNamespace
 public static partial class Extension
 {
     /// <summary>

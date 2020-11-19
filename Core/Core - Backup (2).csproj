@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Core</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Company>Mohammad Sadeq Sirjani</Company>
+    <Product>Cactus</Product>
+    <PackageId>Cactus.Blade.Core</PackageId>
+    <AssemblyName>Cactus.Blade.Core</AssemblyName>
+    <RootNamespace>Cactus.Blade.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System.ByteArray\ByteArray.ToMemoryStream.cs" />
+    <Compile Remove="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="System.Array\Array.ClearAll.cs" />
+    <None Include="System.ByteArray\ByteArray.ToMemoryStream.cs" />
+    <None Include="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
+    <None Include="System.Int32\CodeObject\Int32.Between.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
+</Project>

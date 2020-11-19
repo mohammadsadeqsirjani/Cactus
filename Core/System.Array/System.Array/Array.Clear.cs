@@ -1,5 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-public static partial class Extension
+﻿public static partial class Extension
 {
     /// <summary>
     ///     Sets a range of elements in the  to zero, to false, or to null, depending on the element type.

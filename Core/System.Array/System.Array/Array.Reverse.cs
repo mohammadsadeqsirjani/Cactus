@@ -1,5 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-public static partial class Extension
+﻿public static partial class Extension
 {
     /// <summary>
     ///     Reverses the sequence of the elements in the entire one-dimensional .
