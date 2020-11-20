@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 public static partial class Extension
 {
     /// <summary>A TKey extension method that from cache.</summary>
@@ -86,4 +85,3 @@ public static partial class Extension
         return @this.FromCache(cache, key, valueFactory);
     }
 }
-
