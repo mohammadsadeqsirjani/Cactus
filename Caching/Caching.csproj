@@ -32,6 +32,7 @@
       <PackagePath></PackagePath>
     </None>
     <None Include="System.Object\Object.FromCache.cs" />
+    <None Include="System.Runtime.Caching.MemoryCache\MemoryCache.AddOrGetExisting.cs" />
   </ItemGroup>
 
   <ItemGroup>
