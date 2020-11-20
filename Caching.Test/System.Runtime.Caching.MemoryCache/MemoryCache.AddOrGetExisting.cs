@@ -1,9 +1,9 @@
-﻿//using Caching.Test.System.Object;
-//using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using System;
 //using System.Runtime.Caching;
 
-//namespace Caching.Test.System.Runtime.Caching.MemoryCache
+//// ReSharper disable once CheckNamespace
+//namespace Caching.Blade.Caching.Test
 //{
 //    [TestClass]
 //    public class MemoryCache
@@ -15,7 +15,7 @@
 //            var cache3 = new CacheTest();
 //            var cache4 = new CacheTest();
 
-//            var cache = global::System.Runtime.Caching.MemoryCache.Default;
+//            var cache = System.Runtime.Caching.MemoryCache.Default;
 
 //            var cache11 = cache.AddOrGetExisting("cache1", 1);
 //            var cache12 = cache.AddOrGetExisting("cache1", 2);
@@ -40,6 +40,17 @@
 
 //            Assert.AreEqual(1, cache41);
 //            Assert.AreEqual(1, cache42);
+//        }
+
+//        public class CacheTest
+//        {
+//            public int Cache;
+
+//            public int Increment()
+//            {
+//                Cache++;
+//                return Cache;
+//            }
 //        }
 //    }
 //}
