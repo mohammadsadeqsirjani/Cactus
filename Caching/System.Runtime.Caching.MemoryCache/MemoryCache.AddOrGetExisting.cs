@@ -13,9 +13,8 @@ public static partial class Extension
     public static TValue AddOrGetExisting<TValue>(this MemoryCache cache, string key,
         TValue value)
     {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-        object item = cache.AddOrGetExisting(key, value, new CacheItemPolicy()) ?? value;
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+        // ReSharper disable once AssignNullToNotNullAttribute
+        var item = cache.AddOrGetExisting(key, value, new CacheItemPolicy()) ?? value;
 
         return (TValue)item;
     }
@@ -31,7 +30,7 @@ public static partial class Extension
     {
         var lazy = new Lazy<TValue>(() => valueFactory(key));
 
-        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, new CacheItemPolicy()) ?? lazy;
+        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, new CacheItemPolicy());
 
         return item.Value;
     }
@@ -45,11 +44,11 @@ public static partial class Extension
     /// <param name="regionName">(Optional) name of the region.</param>
     /// <returns>A TValue.</returns>
     public static TValue AddOrGetExisting<TValue>(this MemoryCache cache, string key,
-        Func<string, TValue> valueFactory, CacheItemPolicy policy, string regionName = null)
+        Func<string, TValue> valueFactory, CacheItemPolicy policy, string regionName = null!)
     {
         var lazy = new Lazy<TValue>(() => valueFactory(key));
 
-        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, policy, regionName) ?? lazy;
+        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, policy, regionName);
 
         return item.Value;
     }
@@ -67,10 +66,8 @@ public static partial class Extension
     {
         var lazy = new Lazy<TValue>(() => valueFactory(key));
 
-        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, absoluteExpiration, regionName) ??
-                            lazy;
+        Lazy<TValue> item = (Lazy<TValue>)cache.AddOrGetExisting(key, lazy, absoluteExpiration, regionName);
 
         return item.Value;
     }
 }
-
