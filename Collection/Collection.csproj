@@ -23,4 +23,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="System.Collections.Specialized.NameValueCollection\" />
+  </ItemGroup>
+
 </Project>
