@@ -1,6 +1,7 @@
 ﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//namespace Caching.Test.System.Object
+//// ReSharper disable once CheckNamespace
+//namespace Caching.Blade.Caching.Test
 //{
 //    [TestClass]
 //    public class Object
@@ -28,6 +29,17 @@
 
 //            Assert.AreEqual(1, cache31);
 //            Assert.AreEqual(1, cache32);
+//        }
+
+//        public class CacheTest
+//        {
+//            public int Cache;
+
+//            public int Increment()
+//            {
+//                Cache++;
+//                return Cache;
+//            }
 //        }
 //    }
 //}
