@@ -11,4 +11,12 @@ public static partial class Extension
     {
         return DateTime.Now.Add(@this);
     }
+
+    /// <summary>
+    /// Adds given <see cref="TimeSpan"/> to supplied <paramref name="originalValue"/> <see cref="DateTime"/> and returns resulting <see cref="DateTime"/> in the future.
+    /// </summary>
+    public static DateTime FromNow(this TimeSpan @this, DateTime originalValue)
+    {
+        return originalValue + @this;
+    }
 }
