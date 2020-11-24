@@ -11,4 +11,12 @@ public static partial class Extension
     {
         return DateTime.Now.Subtract(@this);
     }
+
+    /// <summary>
+    /// Subtracts given <see cref="TimeSpan"/> from <paramref name="originalValue"/> <see cref="DateTime"/> and returns resulting <see cref="DateTime"/> in the past.
+    /// </summary>
+    public static DateTime Before(this TimeSpan @this, DateTime originalValue)
+    {
+        return originalValue - @this;
+    }
 }
