@@ -9,6 +9,7 @@
     /// <returns>A DateTime.</returns>
     public static System.DateTime SetTime(this System.DateTime @this, int hour, int minute)
     {
+        // ReSharper disable once IntroduceOptionalParameters.Global
         return SetTime(@this, hour, minute, 0, 0);
     }
 
@@ -25,6 +26,8 @@
         return SetTime(@this, hour, minute, second, 0);
     }
 
+
+
     /// <summary>
     ///     Sets the time of the @this date with millisecond precision.
     /// </summary>
@@ -34,7 +37,7 @@
     /// <param name="second">The second.</param>
     /// <param name="millisecond">The millisecond.</param>
     /// <returns>A DateTime.</returns>
-    public static System.DateTime SetTime(this System.DateTime @this, int hour, int minute = 0, int second = 0, int millisecond = 0)
+    public static System.DateTime SetTime(this System.DateTime @this, int hour, int minute, int second, int millisecond)
     {
         return new System.DateTime(@this.Year, @this.Month, @this.Day, hour, minute, second, millisecond);
     }
