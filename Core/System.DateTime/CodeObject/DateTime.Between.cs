@@ -8,7 +8,6 @@
     /// <param name="maxValue">The maximum value.</param>
     /// <returns>true if the value is between the minValue and maxValue, otherwise false.</returns>
     /// ###
-    /// <typeparam name="T">Generic type parameter.</typeparam>
     public static bool Between(this System.DateTime @this, System.DateTime minValue,
         System.DateTime maxValue)
     {
