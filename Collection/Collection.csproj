@@ -10,9 +10,14 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Collection</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Collection</RepositoryUrl>
+    <PackageIcon>cactus.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="..\cactus.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
