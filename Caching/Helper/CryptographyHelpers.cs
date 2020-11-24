@@ -10,9 +10,9 @@ namespace Cactus.Blade.Caching.Helper
     /// <remarks>
     /// Originally inspired by https://msdn.microsoft.com/en-us/library/system.security.cryptography.aesmanaged(v=vs.110).aspx
     /// </remarks>
-    internal class CryptographyHelpers
+    public class CryptographyHelpers
     {
-        internal static string Decrypt(string password, string salt, string encrypted_value)
+        public static string Decrypt(string password, string salt, string encrypted_value)
         {
             using var aes = Aes.Create();
 
@@ -34,7 +34,7 @@ namespace Cactus.Blade.Caching.Helper
             return decrypted;
         }
 
-        internal static string Encrypt(string password, string salt, string plain_text)
+        public static string Encrypt(string password, string salt, string plain_text)
         {
             using var aes = Aes.Create();
 
