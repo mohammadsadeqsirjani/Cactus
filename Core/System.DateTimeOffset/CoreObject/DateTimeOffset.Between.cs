@@ -4,13 +4,13 @@
     ///     A T extension method that check if the value is between (exclusif) the minValue and maxValue.
     /// </summary>
     /// <param name="this">The @this to act on.</param>
-    /// <param name="minValue">The minimum value.</param>
-    /// <param name="maxValue">The maximum value.</param>
+    /// <param name="minimum">The minimum value.</param>
+    /// <param name="maximum">The maximum value.</param>
     /// <returns>true if the value is between the minValue and maxValue, otherwise false.</returns>
     /// ###
-    public static bool Between(this System.DateTimeOffset @this, System.DateTimeOffset minValue,
-        System.DateTimeOffset maxValue)
+    public static bool Between(this System.DateTimeOffset @this, System.DateTimeOffset minimum,
+        System.DateTimeOffset maximum)
     {
-        return minValue.CompareTo(@this) == -1 && @this.CompareTo(maxValue) == -1;
+        return minimum.CompareTo(@this) == -1 && @this.CompareTo(maximum) == -1;
     }
 }
