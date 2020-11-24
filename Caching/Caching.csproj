@@ -19,10 +19,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="System.Object\Object.FromCache.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\cactus.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -31,11 +27,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="System.Object\Object.FromCache.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
 </Project>
