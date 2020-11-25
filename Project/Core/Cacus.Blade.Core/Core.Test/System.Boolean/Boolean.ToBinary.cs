@@ -11,8 +11,8 @@ namespace Core.Test.System.Boolean
             const bool thisTrue = true;
             const bool thisFalse = false;
 
-            var result1 = @thisTrue.ToBinary();
-            var result2 = @thisFalse.ToBinary();
+            var result1 = thisTrue.ToBinary();
+            var result2 = thisFalse.ToBinary();
 
             Assert.AreEqual(1, result1);
             Assert.AreEqual(0, result2);
