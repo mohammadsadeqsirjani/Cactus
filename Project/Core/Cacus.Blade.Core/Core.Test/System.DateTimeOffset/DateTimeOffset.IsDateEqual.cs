@@ -9,10 +9,10 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void IsDateEqual()
         {
-            var @thisMorning = new global::System.DateTimeOffset(2014, 04, 12, 8, 0, 0, TimeSpan.Zero);
-            var @thisAfternoon = new global::System.DateTimeOffset(2014, 04, 12, 17, 0, 0, TimeSpan.Zero);
+            var thisMorning = new global::System.DateTimeOffset(2014, 04, 12, 8, 0, 0, TimeSpan.Zero);
+            var thisAfternoon = new global::System.DateTimeOffset(2014, 04, 12, 17, 0, 0, TimeSpan.Zero);
 
-            var result = @thisMorning.IsDateEqual(@thisAfternoon);
+            var result = thisMorning.IsDateEqual(thisAfternoon);
 
             Assert.IsTrue(result);
         }
