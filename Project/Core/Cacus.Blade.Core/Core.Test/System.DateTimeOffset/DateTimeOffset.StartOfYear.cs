@@ -13,7 +13,7 @@ namespace Core.Test.System.DateTimeOffset
 
             var value = @this.StartOfYear();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(value.Year, 1, 1, 0, 0, 0, TimeSpan.Zero), value);
+            Assert.AreEqual(new global::System.DateTimeOffset(value.Year, 1, 1, 0, 0, 0, value.Offset), value);
         }
     }
 }
