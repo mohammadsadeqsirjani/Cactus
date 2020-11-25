@@ -9,8 +9,8 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void IsWeekDay()
         {
-            var thisFriday = new global::System.DateTimeOffset(2013, 11, 22, 0, 0, 0, TimeSpan.Zero);
-            var thisSaturday = new global::System.DateTimeOffset(2013, 11, 23, 0, 0, 0, TimeSpan.Zero);
+            var thisFriday = new global::System.DateTimeOffset(2013, 11, 22, 0, 0, 0, global::System. TimeSpan.Zero);
+            var thisSaturday = new global::System.DateTimeOffset(2013, 11, 23, 0, 0, 0, global::System. TimeSpan.Zero);
 
             var value1 = thisFriday.IsWeekDay();
             var value2 = thisSaturday.IsWeekDay();
