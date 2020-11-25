@@ -11,7 +11,7 @@ public static partial class Extension
     public static bool IsLike(this string @this, string pattern)
     {
         // Turn the pattern into regex pattern, and match the whole string with ^$
-        string regexPattern = "^" + Regex.Escape(pattern) + "$";
+        var regexPattern = "^" + Regex.Escape(pattern) + "$";
 
         // Escape special character ?, #, *, [], and [!]
         regexPattern = regexPattern.Replace(@"\[!", "[^")
