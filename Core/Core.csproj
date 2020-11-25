@@ -16,6 +16,9 @@
     <AssemblyName>Cactus.Blade.Core</AssemblyName>
     <RootNamespace>Cactus.Blade.Core</RootNamespace>
     <Version>1.2.1</Version>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <PackageReleaseNotes>Core is a library that is intuitive, fast and extensible.</PackageReleaseNotes>
+    <Description>Core is a library that is intuitive, fast and extensible.</Description>
   </PropertyGroup>
 
   <ItemGroup>
