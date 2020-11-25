@@ -17,7 +17,7 @@ namespace Core.Test.System.Text.StringBuilder
             Assert.AreEqual(null, new global::System.Text.StringBuilder(" ").ExtractComment());
             Assert.AreEqual("//z", new global::System.Text.StringBuilder("//z").ExtractComment().ToString());
             Assert.AreEqual("//z", new global::System.Text.StringBuilder("////z").ExtractComment(2).ToString());
-            Assert.AreEqual("//z", new global::System.Text.StringBuilder("////z" + "\n" + "z").ExtractComment(2, out endIndex).ToString());
+            Assert.AreEqual("//z", new global::System.Text.StringBuilder("////z" + global::System.Environment.NewLine + "z").ExtractComment(2, out endIndex).ToString());
             Assert.AreEqual(5, endIndex);
         }
     }
