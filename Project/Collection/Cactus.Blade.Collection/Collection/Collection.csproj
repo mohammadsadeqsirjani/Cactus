@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.2.1</Version>
+    <PackageId>Cactus.Blade.Collection</PackageId>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Company>Mohammad Sadeq Sirjani</Company>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Collection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Collection</RepositoryUrl>
+    <PackageIcon>cactus.png</PackageIcon>
+    <Product>Cactus</Product>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <PackageReleaseNotes>Collection is a library that is intuitive, fast and extensible.</PackageReleaseNotes>
+    <Description>Collection is a library that is intuitive, fast and extensible.</Description>
+  </PropertyGroup>
+
+</Project>
