@@ -8,10 +8,10 @@ namespace Core.Test.System.DateTime
         [TestMethod]
         public void IsTimeEqual()
         {
-            var @thisToday = global::System.DateTime.Today;
-            var @thisYesterday = @thisToday.AddDays(-1);
+            var thisToday = global::System.DateTime.Today;
+            var thisYesterday = thisToday.AddDays(-1);
 
-            var result = @thisYesterday.IsTimeEqual(@thisToday);
+            var result = thisYesterday.IsTimeEqual(thisToday);
 
             Assert.IsTrue(result);
         }
