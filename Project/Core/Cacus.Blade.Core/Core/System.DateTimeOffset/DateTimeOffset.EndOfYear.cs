@@ -13,6 +13,6 @@ public static partial class Extension
     {
         return new DateTimeOffset(@this.Year, 1, 1, 0, 0, 0, @this.Offset)
             .AddYears(1)
-            .Subtract(new TimeSpan(0, 0, 0, 0, 1));
+            .Subtract(new TimeSpan(0, 0, 0, 1));
     }
 }
