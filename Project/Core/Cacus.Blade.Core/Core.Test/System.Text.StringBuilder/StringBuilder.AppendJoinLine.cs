@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 
 namespace Core.Test.System.Text.StringBuilder
 {
@@ -9,13 +8,11 @@ namespace Core.Test.System.Text.StringBuilder
         [TestMethod]
         public void AppendLineFormat()
         {
-            var list = new List<string> { "Fizz", "Buzz" };
-
             var @this = new global::System.Text.StringBuilder();
 
-            @this.AppendLineJoin(",", list);
+            @this.AppendLineFormat("{0}{1}", "Fizz", "Buzz");
 
-            Assert.AreEqual("Fizz,Buzz" + "\n", @this.ToString());
+            Assert.AreEqual("FizzBuzz" + global::System.Environment.NewLine, @this.ToString());
         }
     }
 }
