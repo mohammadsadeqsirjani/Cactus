@@ -11,8 +11,8 @@ namespace Core.Test.System.Boolean
             const bool thisTrue = true;
             const bool thisFalse = false;
 
-            var result1 = @thisTrue.ToString("Fizz", "Buzz");
-            var result2 = @thisFalse.ToString("Fizz", "Buzz");
+            var result1 = thisTrue.ToString("Fizz", "Buzz");
+            var result2 = thisFalse.ToString("Fizz", "Buzz");
 
             Assert.AreEqual("Fizz", result1);
             Assert.AreEqual("Buzz", result2);
