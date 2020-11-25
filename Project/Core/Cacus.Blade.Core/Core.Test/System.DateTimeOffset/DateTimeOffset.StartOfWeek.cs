@@ -13,7 +13,7 @@ namespace Core.Test.System.DateTimeOffset
 
             var value = @this.StartOfWeek();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(2014, 04, 13, 0, 0, 0, TimeSpan.Zero), value);
+            Assert.AreEqual(new global::System.DateTimeOffset(2014, 04, 13, 0, 0, 0, value.Offset), value);
         }
     }
 }
