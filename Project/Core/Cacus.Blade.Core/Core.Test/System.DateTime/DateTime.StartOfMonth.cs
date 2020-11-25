@@ -8,9 +8,9 @@ namespace Core.Test.System.DateTime
         [TestMethod]
         public void StartOfMonth()
         {
-            global::System.DateTime @this = global::System.DateTime.Now;
+            var @this = global::System.DateTime.Now;
 
-            global::System.DateTime value = @this.StartOfMonth();
+            var value = @this.StartOfMonth();
 
             Assert.AreEqual(new global::System.DateTime(value.Year, value.Month, 1), value);
         }
