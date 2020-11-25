@@ -9,11 +9,11 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void LastDayOfWeek()
         {
-            var @this = new global::System.DateTimeOffset(2014, 01, 24, 0, 0, 0, TimeSpan.Zero);
+            var @this = new global::System.DateTimeOffset(2014, 01, 24, 0, 0, 0, global::System.TimeSpan.Zero);
 
             var result = @this.LastDayOfWeek();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(2014, 01, 25, 0, 0, 0, TimeSpan.Zero), result);
+            Assert.AreEqual(new global::System.DateTimeOffset(2014, 01, 25, 0, 0, 0, global::System.TimeSpan.Zero), result);
         }
     }
 }
