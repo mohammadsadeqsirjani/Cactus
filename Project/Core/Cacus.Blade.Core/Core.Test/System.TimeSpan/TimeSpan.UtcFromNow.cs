@@ -12,7 +12,7 @@ namespace Core.Test.System.TimeSpan
 
             var value = @this.UtcFromNow();
 
-            Assert.IsTrue(global::System.DateTime.UtcNow.Subtract(value).Days <= -1);
+            Assert.IsTrue(global::System.DateTime.UtcNow.Subtract(value).Days > -1);
         }
     }
 }
