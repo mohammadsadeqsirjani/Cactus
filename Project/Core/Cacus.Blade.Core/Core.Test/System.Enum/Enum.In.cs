@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Core.Test.System.Enum
 {
@@ -9,10 +8,10 @@ namespace Core.Test.System.Enum
         [TestMethod]
         public void In()
         {
-            const Environment.SpecialFolder @this = Environment.SpecialFolder.Desktop;
+            const TestEnum @this = TestEnum.A;
 
-            var result1 = @this.In(Environment.SpecialFolder.Desktop, Environment.SpecialFolder.DesktopDirectory);
-            var result2 = @this.In(Environment.SpecialFolder.DesktopDirectory);
+            var result1 = @this.In(TestEnum.A, TestEnum.B);
+            var result2 = @this.In(TestEnum.C);
 
             Assert.IsTrue(result1);
             Assert.IsFalse(result2);
