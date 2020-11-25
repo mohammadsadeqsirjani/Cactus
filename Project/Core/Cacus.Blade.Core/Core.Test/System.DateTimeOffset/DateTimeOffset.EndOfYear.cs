@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Core.Test.System.DateTimeOffset
 {
@@ -9,11 +8,11 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void EndOfYear()
         {
-            var @this = new global::System.DateTimeOffset(2013, 04, 13, 23, 59, 59, TimeSpan.Zero);
+            var @this = new global::System.DateTimeOffset(2013, 04, 13, 23, 59, 59, global::System.TimeSpan.Zero);
 
             var value = @this.EndOfYear();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(2013, 12, 31, 23, 59, 59, TimeSpan.Zero), value);
+            Assert.AreEqual(new global::System.DateTimeOffset(2013, 12, 31, 23, 59, 59, global::System.TimeSpan.Zero), value);
         }
     }
 }
