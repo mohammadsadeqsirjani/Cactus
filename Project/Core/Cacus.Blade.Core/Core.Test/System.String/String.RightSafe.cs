@@ -10,8 +10,8 @@ namespace Core.Test.System.String
         {
             const string @this = "Fizz";
 
-            var result1 = @this.RightSafe(2);
-            var result2 = @this.RightSafe(int.MaxValue);
+            var result1 = @this.SafeRight(2);
+            var result2 = @this.SafeRight(int.MaxValue);
 
             Assert.AreEqual("zz", result1);
             Assert.AreEqual("Fizz", result2);
