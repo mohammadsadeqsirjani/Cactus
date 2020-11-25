@@ -8,11 +8,14 @@ namespace Core.Test.System.Text.StringBuilder
         [TestMethod]
         public void AppendLineIf()
         {
+            // Type
             var @this = new global::System.Text.StringBuilder();
 
+            // Exemples
             @this.AppendLineIf(x => x.Contains("F"), "Fizz", "Buzz");
 
-            Assert.AreEqual("Fizz" + "\n", @this.ToString());
+            // Unit Test
+            Assert.AreEqual("Fizz" + global::System.Environment.NewLine, @this.ToString());
         }
     }
 }
