@@ -14,6 +14,8 @@
     <PackageReleaseNotes>Guard is a exception validation library that is intuitive, fast and extensible.</PackageReleaseNotes>
     <Product>Cactus</Product>
     <Description>Guard is a exception validation library that is intuitive, fast and extensible.</Description>
+    <AssemblyName>Cactus.Blade.Guard</AssemblyName>
+    <RootNamespace>Cactus.Blade.Guard</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
