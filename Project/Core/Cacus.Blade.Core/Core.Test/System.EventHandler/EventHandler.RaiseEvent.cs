@@ -16,5 +16,17 @@ namespace Core.Test.System.EventHandler
 
             Assert.IsTrue(true);
         }
+
+        [TestMethod]
+        public void RaiseEventArgs()
+        {
+            //var @this = null;
+
+            //var result = @this.RaiseEvent(); 
+
+            //Assert.Fail("Not implemented");
+
+            Assert.IsTrue(true);
+        }
     }
 }
