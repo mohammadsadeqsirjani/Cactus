@@ -11,9 +11,9 @@ namespace Collection.Test.System.Collections.Generic.IDictionary
         {
             var @this = new Dictionary<string, string>();
 
-            string value1 = @this.GetOrAdd("Fizz", "Buzz");
-            string value2 = @this.GetOrAdd("Fizz", "Buzz2");
-            string value3 = @this.GetOrAdd("Fizz2", s => "Buzz");
+            var value1 = @this.GetOrAdd("Fizz", "Buzz");
+            var value2 = @this.GetOrAdd("Fizz", "Buzz2");
+            var value3 = @this.GetOrAdd("Fizz2", s => "Buzz");
 
             Assert.AreEqual("Buzz", value1);
             Assert.AreEqual("Buzz", value2);
