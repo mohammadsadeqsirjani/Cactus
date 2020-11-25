@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caching", "Caching\Caching.csproj", "{6C1D7C56-353D-4300-8EF7-FB72EE24C43C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caching.Test", "Caching.Test\Caching.Test.csproj", "{45FB3C5F-B09F-4DBF-80C6-C2BBCD959DA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C1D7C56-353D-4300-8EF7-FB72EE24C43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1D7C56-353D-4300-8EF7-FB72EE24C43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1D7C56-353D-4300-8EF7-FB72EE24C43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1D7C56-353D-4300-8EF7-FB72EE24C43C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45FB3C5F-B09F-4DBF-80C6-C2BBCD959DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FB3C5F-B09F-4DBF-80C6-C2BBCD959DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FB3C5F-B09F-4DBF-80C6-C2BBCD959DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FB3C5F-B09F-4DBF-80C6-C2BBCD959DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A62C29A-16E8-48FE-8839-9FF7E7C9C3FD}
+	EndGlobalSection
+EndGlobal
