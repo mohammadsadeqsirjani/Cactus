@@ -22,16 +22,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="System.ByteArray\ByteArray.ToMemoryStream.cs" />
-    <Compile Remove="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
-    <Compile Remove="System.DateTime\DateTime.YearAfter.cs" />
-    <Compile Remove="System.DateTime\DateTime.YearEarlier.cs" />
-    <Compile Remove="System.String\String.NullIfEmpty.cs" />
-    <Compile Remove="System.TimeSpan\TimeSpan.Since.cs" />
-    <Compile Remove="System.UInt64\System.Math\UInt64.Max.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\Image\cactus.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -40,15 +30,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="System.Array\Array.ClearAll.cs" />
-    <None Include="System.ByteArray\ByteArray.ToMemoryStream.cs" />
-    <None Include="System.ByteArray\System.Web.HttpServerUtility\System.Web.HttpServerUtility.cs" />
-    <None Include="System.DateTime\DateTime.YearAfter.cs" />
-    <None Include="System.DateTime\DateTime.YearEarlier.cs" />
-    <None Include="System.Int32\CodeObject\Int32.Between.cs" />
-    <None Include="System.String\String.NullIfEmpty.cs" />
-    <None Include="System.TimeSpan\TimeSpan.Since.cs" />
-    <None Include="System.UInt64\System.Math\UInt64.Max.cs" />
   </ItemGroup>
 
 </Project>
