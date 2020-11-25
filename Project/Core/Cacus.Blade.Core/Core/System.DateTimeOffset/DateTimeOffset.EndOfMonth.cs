@@ -12,6 +12,6 @@ public static partial class Extension
     {
         return new DateTimeOffset(@this.Year, @this.Month, 1, 0, 0, 0, @this.Offset)
             .AddMonths(1)
-            .Subtract(new TimeSpan(0, 0, 0, 0, 1));
+            .Subtract(new TimeSpan(0, 0, 0, 1));
     }
 }
