@@ -13,7 +13,7 @@ namespace Core.Test.System.DateTimeOffset
 
             var result = @this.LastDayOfWeek();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(2014, 01, 25, 0, 0, 0, TimeSpan.Zero), result.Date);
+            Assert.AreEqual(new global::System.DateTimeOffset(2014, 01, 25, 0, 0, 0, TimeSpan.Zero), result);
         }
     }
 }
