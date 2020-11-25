@@ -8,9 +8,9 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void SetTime()
         {
-            var @thisToday = global::System.DateTimeOffset.Now;
+            var thisToday = global::System.DateTimeOffset.Now;
 
-            var result = @thisToday.SetTime(15);
+            var result = thisToday.SetTime(15);
 
             Assert.AreEqual(15, result.Hour);
         }
