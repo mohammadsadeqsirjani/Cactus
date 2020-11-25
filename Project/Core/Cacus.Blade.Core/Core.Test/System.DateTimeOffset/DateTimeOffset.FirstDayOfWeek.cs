@@ -9,11 +9,11 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void FirstDayOfWeek()
         {
-            var @this = new global::System.DateTimeOffset(2014, 04, 16, 0, 0, 0, TimeSpan.Zero);
+            var @this = new global::System.DateTimeOffset(2014, 04, 16, 0, 0, 0, global::System. TimeSpan.Zero);
 
             var result = @this.FirstDayOfWeek();
 
-            Assert.AreEqual(new global::System.DateTimeOffset(2014, 04, 13, 0, 0, 0, TimeSpan.Zero), result);
+            Assert.AreEqual(new global::System.DateTimeOffset(2014, 04, 13, 0, 0, 0, global::System. TimeSpan.Zero), result);
         }
     }
 }
