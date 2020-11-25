@@ -9,8 +9,8 @@ namespace Core.Test.System.DateTimeOffset
         [TestMethod]
         public void IsMorning()
         {
-            var thisMorning = new global::System.DateTimeOffset(2014, 04, 12, 8, 0, 0, TimeSpan.Zero);
-            var thisAfternoon = new global::System.DateTimeOffset(2014, 04, 12, 17, 0, 0, TimeSpan.Zero);
+            var thisMorning = new global::System.DateTimeOffset(2014, 04, 12, 8, 0, 0, global::System. TimeSpan.Zero);
+            var thisAfternoon = new global::System.DateTimeOffset(2014, 04, 12, 17, 0, 0, global::System. TimeSpan.Zero);
 
             var result1 = thisMorning.IsMorning();
             var result2 = thisAfternoon.IsMorning();
