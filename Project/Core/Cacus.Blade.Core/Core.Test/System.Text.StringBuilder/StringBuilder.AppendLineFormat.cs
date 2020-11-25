@@ -12,7 +12,7 @@ namespace Core.Test.System.Text.StringBuilder
 
             @this.AppendLineFormat("{0}{1}", "Fizz", "Buzz");
 
-            Assert.AreEqual("FizzBuzz" + "\n", @this.ToString());
+            Assert.AreEqual("FizzBuzz" + global::System.Environment.NewLine, @this.ToString());
         }
     }
 }
