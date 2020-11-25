@@ -13,8 +13,8 @@ public static partial class Extension
     /// <returns>The decrypted string.</returns>
     public static string DecryptRsa(this string @this, string key)
     {
-        var cspParameters = new CspParameters { KeyContainerName = key };
-        var rsa = new RSACryptoServiceProvider(cspParameters) { PersistKeyInCsp = true };
+        var cpp = new CspParameters { KeyContainerName = key };
+        var rsa = new RSACryptoServiceProvider(cpp) { PersistKeyInCsp = true };
         var decryptArray = @this.Split(new[] { "-" }, StringSplitOptions.None);
         var decryptByteArray =
             Array.ConvertAll(decryptArray, (s => Convert.ToByte(byte.Parse(s, NumberStyles.HexNumber))));
