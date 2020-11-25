@@ -1,6 +1,6 @@
-# Cactus.Blade.Caching
-
 ![Logo](Image/cactus-64.png)
+
+# Cactus.Blade.Caching
 
 ## What is Cactus.Blade.Caching
 
