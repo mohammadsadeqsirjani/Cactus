@@ -11,7 +11,7 @@ namespace Core.Test.System.Enum
         [TestMethod]
         public void GetCustomAttributeDescription()
         {
-            const TestEnum @this = TestEnum.Test;
+            const TestEnum @this = TestEnum.A;
 
             var result = @this.GetCustomAttributeDescription();
 
@@ -22,6 +22,9 @@ namespace Core.Test.System.Enum
 
     public enum TestEnum
     {
-        Test
+        A,
+        B,
+        C,
+        D
     }
 }
