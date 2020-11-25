@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Core.Test.System.Enum
 {
@@ -9,13 +8,13 @@ namespace Core.Test.System.Enum
         [TestMethod]
         public void NotIn()
         {
-            const Environment.SpecialFolder @this = Environment.SpecialFolder.Desktop;
+            const TestEnum @this = TestEnum.A;
 
-            var result1 = @this.NotIn(Environment.SpecialFolder.Desktop, Environment.SpecialFolder.DesktopDirectory);
-            var result2 = @this.NotIn(Environment.SpecialFolder.DesktopDirectory);
+            var result1 = @this.NotIn(TestEnum.D, TestEnum.B);
+            var result2 = @this.NotIn(TestEnum.A);
 
-            Assert.IsFalse(result1);
-            Assert.IsTrue(result2);
+            Assert.IsTrue(result1);
+            Assert.IsFalse(result2);
         }
     }
 }
