@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
 
 namespace Core.Test.System.ByteArray
 {
@@ -11,7 +10,7 @@ namespace Core.Test.System.ByteArray
         {
             var @this = new byte[1] { 1 };
 
-            MemoryStream result = @this.ToMemoryStream();
+            var result = @this.ToMemoryStream();
 
             Assert.AreEqual(1, result.ToArray()[0]);
         }
