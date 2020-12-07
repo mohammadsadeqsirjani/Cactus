@@ -33,6 +33,7 @@ namespace Cactus.Blade.Logger
         internal delegate T Factory();
 
         private T _firstItem;
+
         private readonly Element[] _items;
 
         private readonly Factory _factory;
@@ -64,7 +65,9 @@ namespace Cactus.Blade.Logger
         public T Allocate()
         {
             var instance = _firstItem;
-            if (instance == null || instance != Interlocked.CompareExchange(ref _firstItem, null, instance))
+
+            if (instance == null ||
+                instance != Interlocked.CompareExchange(ref _firstItem, null, instance))
                 instance = AllocateSlow();
 
             return instance;
@@ -76,12 +79,11 @@ namespace Cactus.Blade.Logger
 
             for (var i = 0; i < items.Length; i++)
             {
-                var inst = items[i].Value;
-                if (inst == null)
-                    continue;
+                var instance = items[i].Value;
 
-                if (inst == Interlocked.CompareExchange(ref items[i].Value, null, inst))
-                    return inst;
+                if (instance == null) continue;
+
+                if (instance == Interlocked.CompareExchange(ref items[i].Value, null, instance)) return instance;
             }
 
             return CreateInstance();
@@ -110,11 +112,13 @@ namespace Cactus.Blade.Logger
         private void FreeSlow(T obj)
         {
             var items = _items;
+
             for (var i = 0; i < items.Length; i++)
             {
                 if (items[i].Value != null) continue;
 
                 items[i].Value = obj;
+
                 break;
             }
         }
@@ -125,8 +129,8 @@ namespace Cactus.Blade.Logger
         public void Clear()
         {
             _firstItem = null;
-            for (var i = 0; i < _items.Length; i++)
-                _items[i].Value = null;
+
+            for (var i = 0; i < _items.Length; i++) _items[i].Value = null;
         }
     }
 }
