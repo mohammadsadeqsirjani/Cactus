@@ -16,11 +16,9 @@ namespace Cactus.Blade.Logger
 
         private static readonly ThreadLocal<IPropertyContext> _threadProperties;
 
-
         private static readonly Lazy<IPropertyContext> _globalProperties;
 
         private readonly Lazy<IPropertyContext> _properties;
-
 
         /// <summary>
         /// Initializes the <see cref="Logger"/> class.
@@ -43,7 +41,6 @@ namespace Cactus.Blade.Logger
         {
             _properties = new Lazy<IPropertyContext>(() => new PropertyContext());
         }
-
 
         /// <summary>
         /// Gets the global property context.  All values are copied to each log on write.
@@ -80,7 +77,6 @@ namespace Cactus.Blade.Logger
         /// </value>
         public string Name { get; set; }
 
-
         /// <summary>
         /// Start a fluent <see cref="LogBuilder" /> with the specified <see cref="LogLevel" />.
         /// </summary>
@@ -105,7 +101,6 @@ namespace Cactus.Blade.Logger
         {
             return CreateBuilder(logLevel);
         }
-
 
         /// <summary>
         /// Start a fluent <see cref="LogBuilder" /> with the computed <see cref="LogLevel" />.
@@ -136,7 +131,6 @@ namespace Cactus.Blade.Logger
             return CreateBuilder(logLevel);
         }
 
-
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Trace"/> logger.
         /// </summary>
@@ -157,7 +151,6 @@ namespace Cactus.Blade.Logger
         {
             return CreateBuilder(LogLevel.Trace);
         }
-
 
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Debug"/> logger.
@@ -180,7 +173,6 @@ namespace Cactus.Blade.Logger
             return CreateBuilder(LogLevel.Debug);
         }
 
-
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Info"/> logger.
         /// </summary>
@@ -201,7 +193,6 @@ namespace Cactus.Blade.Logger
         {
             return CreateBuilder(LogLevel.Info);
         }
-
 
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Warn"/> logger.
@@ -224,7 +215,6 @@ namespace Cactus.Blade.Logger
             return CreateBuilder(LogLevel.Warn);
         }
 
-
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Error"/> logger.
         /// </summary>
@@ -245,7 +235,6 @@ namespace Cactus.Blade.Logger
         {
             return CreateBuilder(LogLevel.Error);
         }
-
 
         /// <summary>
         /// Start a fluent <see cref="LogLevel.Fatal"/> logger.
@@ -268,17 +257,16 @@ namespace Cactus.Blade.Logger
             return CreateBuilder(LogLevel.Fatal);
         }
 
-
         /// <summary>
         /// Registers a <see langword="delegate"/> to write logs to.
         /// </summary>
         /// <param name="writer">The <see langword="delegate"/> to write logs to.</param>
         public static void RegisterWriter(Action<LogData> writer)
         {
-            if (writer == null)
-                throw new ArgumentNullException(nameof(writer));
+            if (writer == null) throw new ArgumentNullException(nameof(writer));
 
             var logWriter = new DelegateLogWriter(writer);
+
             RegisterWriter(logWriter);
         }
 
@@ -289,20 +277,17 @@ namespace Cactus.Blade.Logger
         public static void RegisterWriter<TWriter>(TWriter writer)
             where TWriter : ILogWriter
         {
-            if (writer == null)
-                throw new ArgumentNullException(nameof(writer));
+            if (writer == null) throw new ArgumentNullException(nameof(writer));
 
-            if (writer.Equals(_logWriter))
-                return;
+            if (writer.Equals(_logWriter)) return;
 
             var current = _logWriter;
-            if (Interlocked.CompareExchange(ref _logWriter, writer, current) != current)
-                return;
+
+            if (Interlocked.CompareExchange(ref _logWriter, writer, current) != current) return;
 
             ObjectPool.Clear();
 
         }
-
 
         /// <summary>
         /// Creates a new <see cref="ILogger"/> using the specified fluent <paramref name="builder"/> action.
@@ -348,12 +333,12 @@ namespace Cactus.Blade.Logger
             return CreateLogger(typeof(T));
         }
 
-
         private static ILogBuilder CreateBuilder(LogLevel logLevel, string callerFilePath)
         {
             var name = GetName(callerFilePath);
 
             var builder = ObjectPool.Allocate();
+
             builder
                 .Reset()
                 .Level(logLevel)
@@ -367,6 +352,7 @@ namespace Cactus.Blade.Logger
         private ILogBuilder CreateBuilder(LogLevel logLevel)
         {
             var builder = ObjectPool.Allocate();
+
             builder
                 .Reset()
                 .Level(logLevel);
@@ -377,12 +363,11 @@ namespace Cactus.Blade.Logger
             return builder;
         }
 
-
         private static string GetName(string path)
         {
             path = GetFileName(path);
-            if (path == null)
-                return null;
+
+            if (path == null) return null;
 
             int i;
 
@@ -397,9 +382,9 @@ namespace Cactus.Blade.Logger
 
             for (var i = length; --i >= 0;)
             {
-                var ch = path[i];
+                var character = path[i];
 
-                if (ch == '\\' || ch == '/' || ch == ':') return path.Substring(i + 1, length - i - 1);
+                if (character == '\\' || character == '/' || character == ':') return path.Substring(i + 1, length - i - 1);
 
             }
 
@@ -409,15 +394,18 @@ namespace Cactus.Blade.Logger
         private static IPropertyContext CreateLocal()
         {
             var propertyContext = new PropertyContext();
+
             propertyContext.Set("ThreadId", Thread.CurrentThread.ManagedThreadId);
+
             return propertyContext;
         }
-
 
         private static IPropertyContext CreateGlobal()
         {
             var propertyContext = new PropertyContext();
+
             propertyContext.Set("MachineName", Environment.MachineName);
+
             return propertyContext;
         }
 
@@ -431,13 +419,12 @@ namespace Cactus.Blade.Logger
 
         }
 
-
         private ILogBuilder MergeDefaults(ILogBuilder builder)
         {
             if (!string.IsNullOrEmpty(Name)) builder.Logger(Name);
 
-            if (_properties.IsValueCreated)
-                _properties.Value.Apply(builder);
+            if (_properties.IsValueCreated) _properties.Value.Apply(builder);
+
             return builder;
         }
     }
