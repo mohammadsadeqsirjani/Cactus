@@ -9,7 +9,6 @@ namespace Cactus.Blade.Logger
     /// </summary>
     public sealed class LogBuilder : ILogBuilder
     {
-        private readonly LogData _data;
         private readonly ILogWriter _writer;
         private readonly IObjectPool<LogBuilder> _objectPool;
 
@@ -33,7 +32,7 @@ namespace Cactus.Blade.Logger
         public LogBuilder(ILogWriter writer)
         {
             _writer = writer ?? throw new ArgumentNullException(nameof(writer));
-            _data = new LogData();
+            LogData = new LogData();
         }
 
 
@@ -43,7 +42,7 @@ namespace Cactus.Blade.Logger
         /// <value>
         /// The log data.
         /// </value>
-        public LogData LogData => _data;
+        public LogData LogData { get; }
 
         /// <summary>
         /// Sets the level of the logging event.
@@ -52,7 +51,7 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Level(LogLevel logLevel)
         {
-            _data.LogLevel = logLevel;
+            LogData.LogLevel = logLevel;
             return this;
         }
 
@@ -63,7 +62,7 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Logger(string logger)
         {
-            _data.Logger = logger;
+            LogData.Logger = logger;
 
             return this;
         }
@@ -75,7 +74,7 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Logger<TLogger>()
         {
-            _data.Logger = typeof(TLogger).FullName;
+            LogData.Logger = typeof(TLogger).FullName;
 
             return this;
         }
@@ -87,7 +86,7 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string message)
         {
-            _data.Message = message;
+            LogData.Message = message;
 
             return this;
         }
@@ -99,7 +98,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(Func<string> messageFactory)
         {
-            _data.MessageFormatter = messageFactory;
+            LogData.MessageFormatter = messageFactory;
+
             return this;
         }
 
@@ -111,8 +111,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string format, object arg0)
         {
-            _data.Message = format;
-            _data.Parameters = new[] { arg0 };
+            LogData.Message = format;
+            LogData.Parameters = new[] { arg0 };
 
             return this;
         }
@@ -126,8 +126,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string format, object arg0, object arg1)
         {
-            _data.Message = format;
-            _data.Parameters = new[] { arg0, arg1 };
+            LogData.Message = format;
+            LogData.Parameters = new[] { arg0, arg1 };
 
             return this;
         }
@@ -142,8 +142,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string format, object arg0, object arg1, object arg2)
         {
-            _data.Message = format;
-            _data.Parameters = new[] { arg0, arg1, arg2 };
+            LogData.Message = format;
+            LogData.Parameters = new[] { arg0, arg1, arg2 };
 
             return this;
         }
@@ -159,8 +159,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string format, object arg0, object arg1, object arg2, object arg3)
         {
-            _data.Message = format;
-            _data.Parameters = new[] { arg0, arg1, arg2, arg3 };
+            LogData.Message = format;
+            LogData.Parameters = new[] { arg0, arg1, arg2, arg3 };
 
             return this;
         }
@@ -173,8 +173,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(string format, params object[] args)
         {
-            _data.Message = format;
-            _data.Parameters = args;
+            LogData.Message = format;
+            LogData.Parameters = args;
 
             return this;
         }
@@ -188,9 +188,9 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Message(IFormatProvider provider, string format, params object[] args)
         {
-            _data.FormatProvider = provider;
-            _data.Message = format;
-            _data.Parameters = args;
+            LogData.FormatProvider = provider;
+            LogData.Message = format;
+            LogData.Parameters = args;
 
             return this;
         }
@@ -206,9 +206,9 @@ namespace Cactus.Blade.Logger
         {
             if (name == null) throw new ArgumentNullException(nameof(name));
 
-            _data.Properties ??= new Dictionary<string, object>();
+            LogData.Properties ??= new Dictionary<string, object>();
 
-            _data.Properties[name] = value;
+            LogData.Properties[name] = value;
 
             return this;
         }
@@ -220,7 +220,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public ILogBuilder Exception(Exception exception)
         {
-            _data.Exception = exception;
+            LogData.Exception = exception;
+
             return this;
         }
 
@@ -231,7 +232,8 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         internal ILogBuilder Reset()
         {
-            _data.Reset();
+            LogData.Reset();
+
             return this;
         }
 
@@ -247,13 +249,13 @@ namespace Cactus.Blade.Logger
             [CallerLineNumber] int callerLineNumber = 0)
         {
             if (callerMemberName != null)
-                _data.MemberName = callerMemberName;
+                LogData.MemberName = callerMemberName;
             if (callerFilePath != null)
-                _data.FilePath = callerFilePath;
+                LogData.FilePath = callerFilePath;
             if (callerLineNumber != 0)
-                _data.LineNumber = callerLineNumber;
+                LogData.LineNumber = callerLineNumber;
 
-            _writer.WriteLog(_data);
+            _writer.WriteLog(LogData);
 
             _objectPool?.Free(this);
         }
@@ -272,8 +274,7 @@ namespace Cactus.Blade.Logger
             [CallerFilePath] string callerFilePath = null,
             [CallerLineNumber] int callerLineNumber = 0)
         {
-            if (condition == null || !condition())
-                return;
+            if (condition == null || !condition()) return;
 
             Write(callerMemberName, callerFilePath, callerLineNumber);
         }
@@ -291,8 +292,7 @@ namespace Cactus.Blade.Logger
             [CallerFilePath] string callerFilePath = null,
             [CallerLineNumber] int callerLineNumber = 0)
         {
-            if (!condition)
-                return;
+            if (!condition) return;
 
             Write(callerMemberName, callerFilePath, callerLineNumber);
         }
