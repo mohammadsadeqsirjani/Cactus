@@ -18,7 +18,6 @@ namespace Cactus.Blade.Logger
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-
         /// <summary>
         /// Sets the initial logger name for the logging event.
         /// </summary>
@@ -50,14 +49,12 @@ namespace Cactus.Blade.Logger
         /// <returns></returns>
         public LoggerCreateBuilder Logger(Type type)
         {
-            if (type == null)
-                throw new ArgumentNullException(nameof(type));
+            if (type == null) throw new ArgumentNullException(nameof(type));
 
             _logger.Name = type.FullName;
 
             return this;
         }
-
 
         /// <summary>
         /// Sets an initial  log context property on the logging event.
@@ -68,8 +65,7 @@ namespace Cactus.Blade.Logger
         /// <exception cref="System.ArgumentNullException">name</exception>
         public LoggerCreateBuilder Property(string name, object value)
         {
-            if (name == null)
-                throw new ArgumentNullException(nameof(name));
+            if (name == null) throw new ArgumentNullException(nameof(name));
 
             _logger.Properties.Set(name, value);
 
