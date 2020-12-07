@@ -8,7 +8,6 @@ namespace Cactus.Blade.Logger
     /// <typeparam name="T">The type used to name the <see cref="ILogger"/>.</typeparam>
     public class LoggerFactory<T> : ILoggerFactory<T>
     {
-        // lazy singleton of logger
         private static readonly Lazy<ILogger> Logger = new Lazy<ILogger>(Blade.Logger.Logger.CreateLogger<T>);
 
         /// <summary>
