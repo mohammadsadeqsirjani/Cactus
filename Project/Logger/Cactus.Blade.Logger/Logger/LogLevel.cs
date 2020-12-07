@@ -3,19 +3,19 @@
     /// <summary>
     /// Defines available log levels.
     /// </summary>
-    public enum LogLevel
+    public enum LogLevel : byte
     {
         /// <summary>Trace log level.</summary>
-        Trace = 0,
+        Trace,
         /// <summary>Debug log level.</summary>
-        Debug = 1,
+        Debug,
         /// <summary>Info log level.</summary>
-        Info = 2,
+        Info,
         /// <summary>Warn log level.</summary>
-        Warn = 3,
+        Warn,
         /// <summary>Error log level.</summary>
-        Error = 4,
+        Error,
         /// <summary>Fatal log level.</summary>
-        Fatal = 5,
+        Fatal,
     }
 }
