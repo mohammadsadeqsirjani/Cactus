@@ -184,7 +184,7 @@ namespace Cactus.Blade.Logger
         /// <summary>
         /// Reset all properties back to default.
         /// </summary>
-        internal void Reset()
+        public void Reset()
         {
             Logger = "Logger";
             LogLevel = LogLevel.Trace;
