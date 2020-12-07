@@ -7,7 +7,6 @@ namespace Cactus.Blade.Logger
     {
         private readonly Dictionary<string, object> _dictionary;
 
-
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyContext"/> class.
         /// </summary>
@@ -22,8 +21,7 @@ namespace Cactus.Blade.Logger
         /// <param name="builder">The builder to copy the properties to.</param>
         public void Apply(ILogBuilder builder)
         {
-            foreach (var (key, value) in _dictionary)
-                builder.Property(key, value);
+            foreach (var (key, value) in _dictionary) builder.Property(key, value);
         }
 
         /// <summary>
@@ -56,6 +54,7 @@ namespace Cactus.Blade.Logger
         public object Get(string key)
         {
             _dictionary.TryGetValue(key, out var value);
+
             return value;
         }
 
@@ -93,6 +92,7 @@ namespace Cactus.Blade.Logger
         public IDisposable Set(string key, object value)
         {
             _dictionary[key] = value;
+
             return new DisposeAction(() => Remove(key));
         }
     }
