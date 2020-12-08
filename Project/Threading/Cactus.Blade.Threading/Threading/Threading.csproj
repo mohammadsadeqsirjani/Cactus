@@ -16,6 +16,8 @@
     <RepositoryType></RepositoryType>
     <AssemblyName>Cactus.Blade.Threading</AssemblyName>
     <RootNamespace>Cactus.Blade.Threading</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
