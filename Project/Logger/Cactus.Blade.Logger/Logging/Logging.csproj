@@ -12,7 +12,13 @@
     <NeutralLanguage>C#</NeutralLanguage>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus.Blade/tree/master/Project/Logger/Cactus.Blade.Logger</RepositoryUrl>
+    <RepositoryType>https://github.com/mohammadsadeqsirjani/Cactus.Blade/tree/master/Project/Logger/Cactus.Blade.Logger</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IContextProvider.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="../LICENSE">
@@ -27,6 +33,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="IContextProvider.cs" />
   </ItemGroup>
 
 </Project>

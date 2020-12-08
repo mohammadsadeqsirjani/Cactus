@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.2.0</Version>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Product>Cactus</Product>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <Description>Various classes related to Threading.</Description>
+    <PackageReleaseNotes>Various classes related to Threading.</PackageReleaseNotes>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Threading</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Threading</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryType></RepositoryType>
+    <AssemblyName>Cactus.Blade.Threading</AssemblyName>
+    <RootNamespace>Cactus.Blade.Threading</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Image\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
