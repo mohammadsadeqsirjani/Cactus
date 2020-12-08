@@ -12,6 +12,8 @@
     <NeutralLanguage>C#</NeutralLanguage>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus.Blade/tree/master/Project/Logger/Cactus.Blade.Logger</RepositoryUrl>
+    <RepositoryType>https://github.com/mohammadsadeqsirjani/Cactus.Blade/tree/master/Project/Logger/Cactus.Blade.Logger</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
