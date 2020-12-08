@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -14,6 +14,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>cactus.png</PackageIcon>
     <RepositoryType></RepositoryType>
+    <AssemblyName>Cactus.Blade.Threading</AssemblyName>
+    <RootNamespace>Cactus.Blade.Threading</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
