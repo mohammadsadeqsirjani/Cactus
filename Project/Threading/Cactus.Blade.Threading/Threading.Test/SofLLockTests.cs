@@ -1,6 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Cactus.Blade.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Cactus.Blade.Threading
+namespace Threading.Test
 {
     [TestClass]
     public class SoftLockTests
@@ -24,7 +25,7 @@ namespace Cactus.Blade.Threading
         {
             var softLock = new SoftLock();
 
-            Assert.IsTrue(softLock.IsLockAcquired);
+            Assert.IsFalse(softLock.IsLockAcquired);
         }
 
         [TestMethod("TryAcquire returns false when the lock has already been acquired")]
@@ -34,7 +35,7 @@ namespace Cactus.Blade.Threading
 
             softLock.TryAcquire();
 
-            Assert.IsFalse(softLock.IsLockAcquired);
+            Assert.IsTrue(softLock.IsLockAcquired);
         }
 
         [TestMethod("Release method sets IsLockAcquired property back to false")]
