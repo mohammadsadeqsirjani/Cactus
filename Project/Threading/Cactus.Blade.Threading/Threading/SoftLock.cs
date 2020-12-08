@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Threading
+namespace Cactus.Blade.Threading
 {
     /// <summary>
     /// An object that enables exclusive access to critical sections of code. Unlike a true lock, where
