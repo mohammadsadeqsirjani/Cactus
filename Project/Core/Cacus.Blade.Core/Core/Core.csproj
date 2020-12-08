@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Core</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Company>Mohammad Sadeq Sirjani</Company>
+    <Product>Cactus</Product>
+    <PackageId>Cactus.Blade.Core</PackageId>
+    <AssemblyName>Cactus.Blade.Core</AssemblyName>
+    <RootNamespace>Cactus.Blade.Core</RootNamespace>
+    <Version>1.2.1</Version>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <PackageReleaseNotes>Core is a library that is intuitive, fast and extensible.</PackageReleaseNotes>
+    <Description>Core is a library that is intuitive, fast and extensible.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Image\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>1.2.1</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>cactus.png</PackageIcon>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Caching</RepositoryUrl>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus/tree/master/Caching</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Product>Cactus</Product>
+    <PackageId>Cactus.Blade.Caching</PackageId>
+    <AssemblyName>Cactus.Blade.Caching</AssemblyName>
+    <RootNamespace>Cactus.Blade.Caching</RootNamespace>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <PackageReleaseNotes>Caching is a simple utility that solves a common problem pragmatically - storing and accessing objects quickly in a .NET app.</PackageReleaseNotes>
+    <Description>Caching is a simple utility that solves a common problem pragmatically - storing and accessing objects quickly in a .NET app.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Image\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>
