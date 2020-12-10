@@ -15,6 +15,7 @@
     <Description>Various classes related to immutablity</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>Cactus.Blade.Immutable</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
