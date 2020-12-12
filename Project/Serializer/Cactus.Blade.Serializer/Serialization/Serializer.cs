@@ -1,14 +1,15 @@
 ﻿using Immutable;
+using Serialization;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 
-namespace Serialization
+namespace Cactus.Blade.Serialization
 {
     /// <summary>
-    /// Provides a set of static methods for serialzing and deserializing.
+    /// Provides a set of static methods for serializing and deserializing.
     /// </summary>
     public static class Serializer
     {
