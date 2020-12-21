@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{A2017EB4-ECE4-4CCE-9E56-DEB990925DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cactus.Blade", "Cactus.Blade\Cactus.Blade.csproj", "{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E89D7FD7-02F9-4D0E-B9B0-A337ABF21BE0} = {A2017EB4-ECE4-4CCE-9E56-DEB990925DBA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9A45552-14DF-45E2-BC28-C0CC0A342701}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.2.0</Version>
+    <Authors>Mohammad Sadeq Sirjani</Authors>
+    <Product>Cactus</Product>
+    <Description>C# Cactus.Blade Library provides comprehensive extension methods that go behold just the common features you need when developing big projects.</Description>
+    <Copyright>@Copyright 2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <NeutralLanguage>C#</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon>cactus.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/mohammadsadeqsirjani/Cactus.Blade</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mohammadsadeqsirjani/Cactus.Blade</RepositoryUrl>
+    <RepositoryType>https://github.com/mohammadsadeqsirjani/Cactus.Blade</RepositoryType>
+    <UserSecretsId>3ba63dbe-2cbc-4bfd-9e0c-9d7b82923545</UserSecretsId>
+    <PackageReleaseNotes>C# Cactus.Blade Library provides comprehensive extension methods that go behold just the common features you need when developing big projects.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Image\cactus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cactus.Blade.Caching" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Collection" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Configuration" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Configuration.ObjectFactory" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Configuration.ProxyFactory" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Core" Version="1.2.3" />
+    <PackageReference Include="Cactus.Blade.Encryption" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Guard" Version="1.2.1" />
+    <PackageReference Include="Cactus.Blade.Immutable" Version="1.2.1" />
+    <PackageReference Include="Cactus.Blade.MimeType" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Passenator" Version="1.2.0" />
+    <PackageReference Include="Cactus.Blade.Serialization" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Serialization.JSerializer" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Serialization.XSerializer" Version="1.2.2" />
+    <PackageReference Include="Cactus.Blade.Threading" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>

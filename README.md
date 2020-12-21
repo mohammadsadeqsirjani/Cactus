@@ -30,4 +30,4 @@ The Cactus.Blade library is built on **netstandard2.1**. This means it's compati
 
 For traditional .NET 4.6.1+, you also need to have a more recent version of NuGet installed (NuGet v4 and up), which comes out-of-the-box with the latest updated versions of Visual Studio 2019 and [JetBrains Rider](https://www.jetbrains.com/rider/).
 
-Cactus.Blade.Caching is Copyright &copy; 2020 Mohammad Sadeq Sirjani under the [MIT license](LICENSE.txt).
+Cactus.Blade is Copyright &copy; 2020 Mohammad Sadeq Sirjani under the [MIT license](LICENSE.txt).
